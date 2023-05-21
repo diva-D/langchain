@@ -6,7 +6,7 @@ from typing import Dict, List, Optional
 from langchain.schema import BaseOutputParser
 
 
-class RegexParser(BaseOutputParser):
+class RegexParser(BaseOutputParser[Dict[str, str]]):
     """Class to parse the output into a dictionary."""
 
     regex: str

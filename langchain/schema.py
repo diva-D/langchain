@@ -341,6 +341,7 @@ class BaseOutputParser(BaseModel, ABC, Generic[T]):
         """
         return self.parse(completion)
 
+    @abstractmethod
     def get_format_instructions(self) -> str:
         """Instructions on how the LLM output should be formatted."""
         raise NotImplementedError
